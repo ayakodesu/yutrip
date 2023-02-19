@@ -1,24 +1,38 @@
-# README
+# yutrip
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
 
-Things you may want to cover:
+### サイトテーマ
+温泉レビューサイト、検索サイト
 
-* Ruby version
 
-* System dependencies
 
-* Configuration
+### テーマを選んだ理由
+温泉に入ることが好きで、じゃらんやグーグルマップなどで温泉を探して入ってきました。
+　どこの温泉に行こうか探すときに、温泉に特化したサイトが多くないことに気づき、
+温泉の質で検索や、あまり知られていない秘境の温泉などが探せるサイトがあればいいなと思っていたので
+このテーマを選びました。
 
-* Database creation
 
-* Database initialization
+### ターゲットユーザ
+温泉好きの方、旅行客
 
-* How to run the test suite
 
-* Services (job queues, cache servers, search engines, etc.)
 
-* Deployment instructions
+### 主な利用シーン
+- ユーザー側 : 近くに温泉がないか探すとき・温泉の質で探したいとき・秘境の温泉に行きたいとき
+-              レビューや新規温泉の投稿（会員登録した方のみ）・閲覧のみは会員登録不要
+- 管理者側 : ユーザー様からのレビュー内容が不適切内容がないか確認（会員様を管理）
 
-* ...
+
+
+
+## 開発環境
+- OS：Linux(CentOS)
+- 言語：HTML,CSS,JavaScript,Ruby,SQL
+- フレームワーク：Ruby on Rails
+- JSライブラリ：jQuery
+- IDE：Cloud9
+
+## 使用素材
+- 外部サービスの画像素材・音声素材を使用した場合は、必ずサービス名とURLを明記してください。
+- 使用しない場合は、使用素材の項目をREADMEから削除してください。
