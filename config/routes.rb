@@ -1,4 +1,33 @@
 Rails.application.routes.draw do
+  namespace :user do
+    get 'favorites/index'
+    get 'favorites/destroy'
+    get 'favorites/create'
+  end
+  namespace :user do
+    get 'spots/new'
+    get 'spots/index'
+    get 'spots/edit'
+    get 'spots/destroy'
+    get 'spots/show'
+    get 'spots/update'
+    get 'spots/create'
+  end
+  namespace :admin do
+    get 'spots/new'
+    get 'spots/index'
+    get 'spots/edit'
+    get 'spots/destroy'
+    get 'spots/show'
+    get 'spots/update'
+    get 'spots/create'
+  end
+  namespace :admin do
+    get 'categories/new'
+    get 'categories/index'
+    get 'categories/edit'
+    get 'categories/destroy'
+  end
   namespace :admin do
     get 'homes/top'
   end
