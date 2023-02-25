@@ -1,16 +1,17 @@
 Rails.application.routes.draw do
 
   namespace :user do
-    get '/' => 'homes#top'
-    get "/home/about" => "homes#about", as: "about"
-    resource :favorites, only: [index, destroy, create]
-    resources :spots, only: [new, index, edit, destroy ,show, update, create]
+    get 'homes/top'
+    get 'homes/about'
+    resource :favorites, only: [:index, :destroy, :create]
+    resources :spots, only: [:new, :index, :edit, :destroy, :show, :update, :create]
+    resources :reviews, only: [:new, :index, :edit, :destroy, :show, :update, :create]
   end
 
   namespace :admin do
     get 'homes/top'
-    resources :spots, only: [new, index, edit, destroy, show, update, create]
-    resources :categories, only: [new, index, edit, destroy]
+    resources :spots, only: [:new, :index, :edit, :destroy, :show, :update, :create]
+    resources :categories, only: [:new, :index, :edit, :destroy]
   end
 
   #devise_for :admins
