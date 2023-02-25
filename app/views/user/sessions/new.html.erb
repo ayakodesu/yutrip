@@ -1,3 +1,16 @@
+<div class="body"></div>
+    <div class="grad"></div>
+    <div class="header">
+      <div>湯<span>トリップ</span></div>
+    </div>
+    <br>
+    <div class="login">
+        <input type="text" placeholder="username" name="user"><br>
+        <input type="password" placeholder="password" name="password"><br>
+        <input type="button" value="Login">
+    </div>
+
+
 <h2>Log in</h2>
 
 <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
@@ -24,3 +37,4 @@
 <% end %>
 
 <%= render "user/shared/links" %>
+
