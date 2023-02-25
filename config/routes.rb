@@ -1,7 +1,7 @@
 Rails.application.routes.draw do
 
   namespace :user do
-    get 'homes/top'
+    get '/' => 'homes#top'
     get 'homes/about'
     resource :favorites, only: [:index, :destroy, :create]
     resources :spots, only: [:new, :index, :edit, :destroy, :show, :update, :create]
