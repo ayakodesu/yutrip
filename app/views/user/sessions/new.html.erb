@@ -9,12 +9,14 @@
   <div class="login">
     <%= f.submit "Log in" %>
   </div>
+  <div class="signup">
+     まだ会員登録されていない方はこちらから
+      <%= render "user/shared/links" %>
+
+  </div>
 </div>
 <% end %>
 
-<div class="row justify-content-center">
-  まだ会員登録されていない方はこちらから
-<%= render "user/shared/links" %>
-</div>
+
 
 

@@ -87,6 +87,19 @@
   cursor: pointer;
 }
 
+.signup {
+  background-color: #e9c85d;
+  display: table;
+}
+
+.signup span {
+  display: table-cell;
+  vertical-align: middle;
+  text-align: center;
+  font-size:3em;
+  cursor: pointer;
+}
+
 input {
   height: 1.25em;
   width: 8.125em;
