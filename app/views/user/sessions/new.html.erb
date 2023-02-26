@@ -1,45 +1,20 @@
-<div class="body"></div>
-    <div class="grad"></div>
-    <div class="header">
-      <div>湯<span>トリップ</span></div>
-    </div>
-    <br>
-    <div class="login">
-      <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
-
-        <%= f.email_field :email, autofocus: true, autocomplete: "email" %>
-
-        <%= f.password_field :password, autocomplete: "current-password" %>
-        <input type="submit" value="Login">
-      <% end %>
-    </div>
-    <%= render "user/shared/links" %>
-
-
-<h2>Log in</h2>
-
 <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
-  <div class="field">
-    <%= f.label :email %><br />
-    <%= f.email_field :email, autofocus: true, autocomplete: "email" %>
+<div class="form">
+  <div class="email">
+    <%= f.email_field :email, autofocus: true, autocomplete: "email", placeholder:"e-mail" %>
   </div>
-
-  <div class="field">
-    <%= f.label :password %><br />
-    <%= f.password_field :password, autocomplete: "current-password" %>
+  <div class="password">
+    <%= f.password_field :password, autocomplete: "current-password", placeholder:"password" %>
   </div>
-
-  <% if devise_mapping.rememberable? %>
-    <div class="field">
-      <%= f.check_box :remember_me %>
-      <%= f.label :remember_me %>
-    </div>
-  <% end %>
-
-  <div class="actions">
+  <div class="login">
     <%= f.submit "Log in" %>
   </div>
+</div>
 <% end %>
 
+<div class="row justify-content-center">
+  まだ会員登録されていない方はこちらから
 <%= render "user/shared/links" %>
+</div>
+
 
