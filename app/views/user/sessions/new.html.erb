@@ -1,21 +1,22 @@
 <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
-<div class="form">
-  <div class="email">
-    <%= f.email_field :email, autofocus: true, autocomplete: "email", placeholder:"e-mail" %>
-  </div>
-  <div class="password">
-    <%= f.password_field :password, autocomplete: "current-password", placeholder:"password" %>
-  </div>
-  <div class="login">
-    <%= f.submit "Log in" %>
-  </div>
+<div class="form-wrapper">
+  <h1>Sign In</h1>
+  <form>
+    <div class="form-item">
+      <label for="email"></label>
+      <%= f.email_field :email, autofocus: true, autocomplete: "email", placeholder:"e-mail" %>
+    </div>
+    <div class="form-item">
+      <label for="password"></label>
+      <%= f.password_field :password, autocomplete: "current-password", placeholder:"password" %>
+    </div>
+    <div class="button-panel">
+      <%= f.submit "Log in", class: "button" %>
+    </div>
+  </form>
   <div class="signup">
-     まだ会員登録されていない方はこちらから
+     まだ会員登録されていない方はこちら
       <%= render "user/shared/links" %>
   </div>
 </div>
 <% end %>
-
-
-
-

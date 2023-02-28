@@ -1,16 +1,28 @@
-<%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
-<div class="form">
-  <div class="email">
-    <%= f.email_field :email, autofocus: true, autocomplete: "email", placeholder:"e-mail" %>
-  </div>
-  <div class="password">
-    <%= f.password_field :password, autocomplete: "current-password", placeholder:"password" %>
-  </div>
-  <div class="login">
-    <%= f.submit "Log in" %>
+<div class="form-wrapper">
+  <h1>Sign In</h1>
+  <form>
+    <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
+    <div class="form-item">
+      <label for="email"></label>
+       <%= f.email_field :email, autofocus: true, autocomplete: "email", placeholder:"e-mail" %>
+    </div>
+    <div class="form-item">
+      <label for="password"></label>
+      <%= f.password_field :password, autocomplete: "current-password", placeholder:"password" %>
+    </div>
+    <div class="button-panel">
+      <%= f.submit "Log in", class: "button" %>
+    </div>
+    <% end %>
+    </form>
+  <div class="form-footer">
+    <p><a href="#">Create an account</a></p>
+    <p><a href="#">Forgot password?</a></p>
   </div>
 </div>
-<% end %>
+
+
+
 
 
 
