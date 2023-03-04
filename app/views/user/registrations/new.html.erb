@@ -1,29 +1,30 @@
-<h2>Sign up</h2>
-
 <%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
   <%= render "user/shared/error_messages", resource: resource %>
-
-  <div class="field">
-    <%= f.label :email %><br />
-    <%= f.email_field :email, autofocus: true, autocomplete: "email" %>
-  </div>
-
-  <div class="field">
-    <%= f.label :password %>
+<div class="form-wrapper">
+  <h1>新規登録</h1>
+  <form>
+    <div class="form-item">
+      <label for="email"></label>
+      <%= f.email_field :email, autofocus: true, autocomplete: "email", placeholder:"e-mail" %>
+    </div>
+    <div class="form-item">
+      <label for="password"></label>
     <% if @minimum_password_length %>
-    <em>(<%= @minimum_password_length %> characters minimum)</em>
     <% end %><br />
-    <%= f.password_field :password, autocomplete: "new-password" %>
-  </div>
+      <%= f.password_field :password, autocomplete: "new-password", placeholder:"password(6文字以上)"  %>
+    </div>
+    <div class="form-item">
+      <label for="password"></label>
+        <%= f.password_field :password_confirmation, autocomplete: "new-password", placeholder:"password(再確認用)" %>
+    </div>
 
-  <div class="field">
-    <%= f.label :password_confirmation %><br />
-    <%= f.password_field :password_confirmation, autocomplete: "new-password" %>
+    <div class="button-panel mb-3">
+      <%= f.submit "Sign up", class: "button" %>
+    </div>
+  </form>
+  <div class="signup">
+     まだ会員登録されている方はこちら
+      <%= render "user/shared/links" %>
   </div>
-
-  <div class="actions">
-    <%= f.submit "Sign up" %>
-  </div>
+</div>
 <% end %>
-
-<<%= render "user/shared/links" %>
