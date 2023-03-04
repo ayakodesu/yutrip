@@ -30,7 +30,7 @@ class User::SessionsController < Devise::SessionsController
   end
 
   def after_sign_out_path_for(resource)
-    new_user_session_path
+    user_path
   end
   # end
 end
