@@ -115,9 +115,18 @@ form {
 }
 
 
-.c{
-  width: 80%;
+
+.slider {
+  width: 90%;
   margin: 0 auto;
   height: 500px;
 }
+.slider-img img {
+  width: 90%;
+  margin: 0 auto;
+  height: 500px;
+}
+
+
+
 

@@ -21,18 +21,12 @@ import "../stylesheets/application"
 //= require jquery_ujs
 
 
-$(function() {
-    $('.a').slick({
-        dots: true,
-    });
+
+$(function () {
+  $(".slider").slick({
+    arrows: false,
+    autoplay: true,
+    adaptiveHeight: true,
+    dots: true,
+  });
 });
-
-
-$(function() {
-    $('.a').slick({
-        dots: true,
-        autoplay: true,
-        autoplaySpeed: 1000,
-    });
-});
-
