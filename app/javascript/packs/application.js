@@ -20,6 +20,7 @@ import "../stylesheets/application"
 //= require jquery
 //= require jquery_ujs
 
+
 $(function() {
     $('.a').slick({
         dots: true,
@@ -31,6 +32,7 @@ $(function() {
     $('.a').slick({
         dots: true,
         autoplay: true,
-        autoplaySpeed: 4000,
+        autoplaySpeed: 1000,
     });
 });
+
