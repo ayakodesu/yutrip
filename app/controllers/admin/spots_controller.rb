@@ -24,8 +24,8 @@ class Admin::SpotsController < ApplicationController
     @spot = Spot.new(spot_params)
     # 3. データをデータベースに保存するためのsaveメソッド実行
     @spot.save
-    # 4. トップ画面へリダイレクト
-    redirect_to admin_homes_top_path
+    # 4. spotsのindexページへリダイレクト
+    redirect_to admin_spots_path
   end
 
   private
