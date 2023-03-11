@@ -1,2 +1,17 @@
-<h1>Admin::Categories#new</h1>
-<p>Find me in app/views/admin/categories/new.html.erb</p>
+<div class="container">
+    <div class="row mt-5 justify-content-center">
+      <div class="font"><h4>カテゴリー追加</h4></div>
+    </div>
+</div>
+
+  <%= form_with model: @category, url: admin_categories_path do |f| %>
+    <div class="container">
+      <div class="row mt-5 justify-content-center">
+        <table>
+          <tr><th>カテゴリー名</th></td>
+          <td><%= f.text_field :name, placeholder: "カテゴリー名" %></td>
+          <td><%=f.submit '新規投稿', class: "btn-gradient-green" %></td></tr>
+          </table>
+        </div>
+      </div>
+  <% end %>

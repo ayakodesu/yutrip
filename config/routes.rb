@@ -11,7 +11,7 @@ Rails.application.routes.draw do
   namespace :admin do
     get 'homes/top'
     resources :spots, only: [:new, :index, :edit, :destroy, :show, :update, :create]
-    resources :categories, only: [:new, :index, :edit, :destroy]
+    resources :categories, only: [:new, :index, :edit, :destroy, :create]
   end
 
   #devise_for :admins
