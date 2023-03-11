@@ -1,2 +1,18 @@
 <h1>User::Spots#index</h1>
 <p>Find me in app/views/user/spots/index.html.erb</p>
+
+<h1>投稿一覧</h1>
+
+<% @spots.each do |spot| %>
+
+  <p>タイトル</p>
+  <span><%= spot.name %></span>
+
+  <p>温泉質</p>
+  <span><%= spot.quality %></span>
+
+  <p>本文</p>
+  <span><%= spot.introduction %></span>
+
+
+<% end %>

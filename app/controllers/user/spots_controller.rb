@@ -3,6 +3,7 @@ class User::SpotsController < ApplicationController
   end
 
   def index
+    @spots = Spot.all
   end
 
   def edit
@@ -17,6 +18,7 @@ class User::SpotsController < ApplicationController
   def update
   end
 
-  def create
+  def spot_params
+    params.require(:spot).permit(:name, :category_id, :quality, :introduction)
   end
 end
