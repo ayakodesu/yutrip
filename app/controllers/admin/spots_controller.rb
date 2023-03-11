@@ -24,12 +24,12 @@ class Admin::SpotsController < ApplicationController
     # 3. データをデータベースに保存するためのsaveメソッド実行
     @spot.save
     # 4. トップ画面へリダイレクト
-    redirect_to '/top'
+    redirect_to admin_homes_top_path
   end
 
   private
   # ストロングパラメータ
   def spot_params
-    params.require(:spot).permit(:title, :body)
+    params.require(:spot).permit(:name, :category_id, :quality, :introduction)
   end
 end
