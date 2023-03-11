@@ -74,7 +74,7 @@ ActiveRecord::Schema.define(version: 2023_02_24_123035) do
   create_table "spots", force: :cascade do |t|
     t.string "name", null: false
     t.text "introduction"
-    t.integer "quality", null: false
+    t.string "quality", null: false
     t.boolean "characteristics", default: true, null: false
     t.string "praice"
     t.datetime "created_at", precision: 6, null: false

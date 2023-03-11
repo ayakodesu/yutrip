@@ -4,6 +4,7 @@ class Admin::SpotsController < ApplicationController
   end
 
   def index
+    @spots = Spot.all
   end
 
   def edit
@@ -28,7 +29,7 @@ class Admin::SpotsController < ApplicationController
   end
 
   private
-  # ストロングパラメータ
+
   def spot_params
     params.require(:spot).permit(:name, :category_id, :quality, :introduction)
   end

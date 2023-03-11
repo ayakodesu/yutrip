@@ -4,7 +4,7 @@ class CreateSpots < ActiveRecord::Migration[6.1]
       #t.integer :category_id, null: false
       t.string :name, null: false
       t.text :introduction
-      t.integer :quality, null: false
+      t.string :quality, null: false
       t.boolean :characteristics, null: false, default: true
       t.string :praice
 
