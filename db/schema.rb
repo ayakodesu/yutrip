@@ -77,6 +77,7 @@ ActiveRecord::Schema.define(version: 2023_02_24_123035) do
     t.string "quality", null: false
     t.boolean "characteristics", default: true, null: false
     t.string "praice"
+    t.string "category_id", null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end
