@@ -1,5 +1,6 @@
 class Admin::SpotsController < ApplicationController
   def new
+    @spot = Spot.new  # Viewへ渡すためのインスタンス変数に空のModelオブジェクトを生成する。
   end
 
   def index
@@ -18,5 +19,17 @@ class Admin::SpotsController < ApplicationController
   end
 
   def create
+     # １.&2. データを受け取り新規登録するためのインスタンス作成
+    @spot = Spot.new(spot_params)
+    # 3. データをデータベースに保存するためのsaveメソッド実行
+    @spot.save
+    # 4. トップ画面へリダイレクト
+    redirect_to '/top'
+  end
+
+  private
+  # ストロングパラメータ
+  def spot_params
+    params.require(:spot).permit(:title, :body)
   end
 end
