@@ -1,8 +1,13 @@
-<div class="container">
-    <div class="row mt-5 justify-content-center">
+<div id="contents">
+  <div id="sub">メニュー</br>
+  <%= link_to "新規投稿", new_admin_spot_path %></br>
+  <%= link_to "カテゴリー新規登録", new_admin_category_path %></br>
+  <%= link_to "温泉投稿一覧", admin_spots_path %></br>
+  </div>
+
+
       <div class="font"><h4>カテゴリー追加</h4></div>
-    </div>
-</div>
+
 
   <%= form_with model: @category, url: admin_categories_path do |f| %>
     <div class="container">
@@ -15,3 +20,5 @@
         </div>
       </div>
   <% end %>
+
+  </div>
