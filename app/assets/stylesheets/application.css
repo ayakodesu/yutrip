@@ -129,49 +129,6 @@ form {
 
 
 
-/*adminトップページ*/
-#contents {
-  width: 100%; /*幅指定*/
-  display: flex;
-}
-#side-1 {
-  width: 100%;
-  flex: 1;
-  background: #eee;
-  padding: 30px;
-}
-#sub {
-  width: 200px; /*幅指定*/
-  background: #ccc;
-  padding: 30px;
-}
-
-@media screen and (max-width: 767px) {
-  #contents {
-    display: block;
-  }
-  #side-1 {
-    width: 100%;
-  }
-  #sub {
-    width: 100%;
-  }
-}
-
-/* 装飾用 */
-
-* {
-  box-sizing: border-box;
-}
-/*body {
-  margin: 0;
-  padding: 40px 40px;
-}*/
-#side-1,
-#sub {
-  height: 100vh;
-}
-
 
 
 
