@@ -128,3 +128,6 @@ form {
 }
 
 
+.slick-initialized {
+  opacity: 1;
+}
