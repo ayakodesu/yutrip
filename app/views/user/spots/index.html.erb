@@ -1,14 +1,17 @@
 <%= render 'index', spots: @spots %>
 
-<h1>投稿一覧</h1>
 
+
+<h1>投稿一覧</h1>
 <% @spots.each do |spot| %>
 
   <p>タイトル</p>
   <span><%= spot.name %></span>
 
+
   <p>カテゴリー</p>
   <span><%#= spot.category.try(:name) %></span>
+
 
   <p>温泉質</p>
   <span><%= spot.quality %></span>
@@ -18,3 +21,4 @@
 
 
 <% end %>
+
