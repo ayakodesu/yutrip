@@ -3,9 +3,10 @@ Rails.application.routes.draw do
   namespace :user do
     get '/' => 'homes#top'
     get 'homes/about'
-    resource :favorites, only: [:index, :destroy, :create]
+    resource :favorites, only: [:destroy, :create]
     resources :spots, only: [:new, :index, :edit, :destroy, :show, :update, :create]
     resources :reviews, only: [:new, :index, :edit, :destroy, :show, :update, :create]
+    resources :favorites, only: [:index]
   end
 
   namespace :admin do
