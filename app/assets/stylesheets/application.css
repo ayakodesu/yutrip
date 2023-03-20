@@ -128,20 +128,19 @@ form {
 
 
 
-
-
-.side {
+/*サイドメニュー*/
+/*.side {
   display: flex;
   flex-direction: row;
-  /*height: 200px;*/
+  /*height: 200px;
 }
 
-.left-column {
+/*.left-column {
   flex: 0.5;
-  background: lightblue;
-}
+  /*background: lightblue;
+}*/
 
-.right-column {
+/*.right-column {
   flex: 3;
-  background: lightgreen;
-}
+  /*background: lightgreen;
+}*/
