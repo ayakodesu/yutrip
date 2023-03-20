@@ -116,20 +116,27 @@ form {
 
 
 
-.slider {
-  width: 90%;
-  margin: 0 auto;
-  height: 500px;
-}
-.slider-img img {
-  width: 90%;
-  margin: 0 auto;
-  height: 500px;
+
+body {
+   font-family:'Noto Sans JP',sans-serif;
+   background-color:#f6f5f4;
 }
 
-
-.slick-initialized {
-  opacity: 1;
+.side {
+  background-color:#ff838b;
+  width:100px;
+  height:300px;
+  text-align:center;
 }
 
+.content {
+  background-color:#b3d874;
+  width:250px;
+  height:300px;
+  text-align:center;
+  margin-left:10px;/*サイドバーとメインコンテンツの間に隙間                    をあけた*/
+}
 
+article {
+  display:flex;/*サイドバーとメインコンテンツを横並びにする                指定をした*/
+}
