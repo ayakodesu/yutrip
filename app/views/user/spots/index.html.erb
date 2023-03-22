@@ -1,26 +1,23 @@
 <%= render 'index', spots: @spots %>
+<h2>投稿一覧</h2>
 
-<h1>投稿一覧</h1>
+<table class="table">
+  <thead>
+      <th>タイトル</th>
+      <th>カテゴリー</th>
+      <th>温泉質</th>
+      <th>本文</th>
+  </thead>
+
+<tbody>
 <% @spots.each do |spot| %>
-
-  <p>タイトル</p>
-  <span><%= spot.name %></span>
-
-
-  <p>カテゴリー</p>
-  <span><%#= spot.category.try(:name) %></span>
-
-
-  <p>温泉質</p>
-  <span><%= spot.quality %></span>
-
-  <p>本文</p>
-  <span><%= spot.introduction %></span>
-
-
+<tr>
+  <td><%= spot.name %></td>
+  <td><%#= spot.category.try(:name) %></td>
+  <td><%= spot.quality %></td>
+  <td><%= spot.introduction %></td>
+</tr>
 <% end %>
-
-
-
+</tbody>
 
 
