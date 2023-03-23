@@ -5,34 +5,27 @@
 <div class="container">
   <div class="row mt-5 justify-content-center">
     <div class="col-6">
-<h1>新規投稿</h1>
-<table class="table table-borderless table-striped">
-<th>商品画像</th>
-      <td><%= f.file_field :image, accept: "image/*" %></td></tr>
+      <h1>新規投稿</h1>
+        <table class="table table-borderless table-striped">
+          <th>商品画像</th>
+          <td><%= f.file_field :image, accept: "image/*" %></td></tr>
 
-  <h4>温泉名</h4>
-  <%= f.text_field :name %>
+          <th>温泉名</th>
+          <td><%= f.text_field :name %></td></tr>
 
+          <th>カテゴリー</th>
+          <td><%= f.collection_select :category_id, Category.all, :id, :name, {include_blank: '--選択してください--'}, class: 'sample' %></td></tr>
 
+          <th>温泉質</th>
+          <td><%= f.text_field :quality %></td></tr>
 
-  <h4>カテゴリー</h4>
-   <td><%= f.collection_select :category_id, Category.all, :id, :name, {include_blank: '--選択してください--'}, class: 'sample' %></td></tr>
-
-
-  <h4>温泉質</h4>
-  <td><%= f.text_field :quality %></td>
-
-
-  <h4>本文</h4>
-  <td><%= f.text_area :introduction %></td>
-
-
-</table>
-
-<div class="row mt-5 justify-content-center">
-  <%= f.submit '投稿' %>
+          <th>本文</th>
+          <td><%= f.text_area :introduction %></td></tr>
+        </table>
+    </div>
   </div>
 </div>
-</div>
+<div class="row mt-5 justify-content-center">
+  <%= f.submit '投稿' %>
 </div>
 <% end %>
