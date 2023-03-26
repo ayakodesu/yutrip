@@ -5,6 +5,7 @@
     <div class="col-md-12">
       <table class="table">
         <thead>
+          <th></th>
           <th>画像</th>
           <th>タイトル</th>
           <th>カテゴリー</th>
@@ -14,6 +15,7 @@
         <tbody>
           <% @spots.each do |spot| %>
         <tr>
+          <td>
            <% if current_user.already_favorited?(spot) %>
           <div class="sample-box">
             <%= link_to user_favorites_path(spot), method: :delete do %>
@@ -31,6 +33,7 @@
             <% end %>
           </div>
           <% end %>
+          </td>
           <td><%= image_tag spot.image, size: '150x100'%></td>
           <td><%= spot.name %></td>
           <td><%#= spot.category.try(:name) %></td>
