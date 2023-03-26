@@ -9,6 +9,9 @@ class User < ApplicationRecord
   has_many :favorites, dependent: :destroy
   has_many :reviews, dependent: :destroy
 
+def already_favorited?(spot)
+    self.favorites.exists?(spot_id: spot.id)
+end
 
 
 end
