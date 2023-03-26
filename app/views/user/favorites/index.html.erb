@@ -1,2 +1,17 @@
-<h1>User::Favorites#index</h1>
-<p>Find me in app/views/user/favorites/index.html.erb</p>
+<% if @favorite.present? %>
+    <tbody>
+      <% @favorites.each do |favorite| %>
+      <% if favorite.spot.is_active %>
+      <tr bgcolor="#f5f5f5">
+        <td><%= link_to (image_tag favorite.spot.image, size: '50x50'), user_spot_path(favorite.spot.id) %></td>
+        <td><%= favorite.spot.name %></td>
+        <td><%= favorite.spot.quality %></td>
+        <td><%= favorite.spot.introduction %></td>
+        <td><%= link_to "商品詳細", user_spot_path(favorite.spot.id), class: "btn-gradient-green" %></td>
+        <td><%= link_to "削除する", user_spot_favorites_path(favorite.spot.id), method: :delete, class: "btn-gradient-dark", method: :delete %></td>
+      </tr>
+      <% end %>
+      <% end %>
+    </tbody>
+  <% end %>
+</table>
