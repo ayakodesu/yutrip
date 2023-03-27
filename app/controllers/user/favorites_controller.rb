@@ -14,7 +14,7 @@ class User::FavoritesController < ApplicationController
     @spot = Spot.find(params[:spot_id])
     @favorite = current_user.favorites.new(spot_id: spot.id)
     @favorite.save
-    redirect_to new_user_spot_path
+    redirect_to user_spots_path
   end
 
   private
