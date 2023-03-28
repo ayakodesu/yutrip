@@ -13,7 +13,7 @@ class User::SpotsController < ApplicationController
   end
 
   def index
-    @spots = Spot.all
+    @spots = Spot.page(params[:page]).per(5)
   end
 
   def edit
