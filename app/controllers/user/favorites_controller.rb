@@ -11,7 +11,8 @@ class User::FavoritesController < ApplicationController
   end
 
   def create
-
+    @favorite = current_user.favorites.create(spot_id: params[:spot_id])
+     redirect_back(fallback_location: user_spots_path)
   end
 
   private
