@@ -74,8 +74,8 @@ ActiveRecord::Schema.define(version: 2023_02_24_123035) do
   create_table "spots", force: :cascade do |t|
     t.string "name", null: false
     t.text "introduction"
-    t.string "quality", null: false
-    t.boolean "characteristics", default: true, null: false
+    t.integer "quality", null: false
+    t.integer "characteristics", null: false
     t.integer "praice"
     t.integer "category_id", null: false
     t.boolean "is_active", default: true, null: false
