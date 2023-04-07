@@ -59,14 +59,14 @@ ActiveRecord::Schema.define(version: 2023_02_24_123035) do
   end
 
   create_table "favorites", force: :cascade do |t|
-    t.integer "user_id"
-    t.integer "spot_id"
+    t.string "user_id", null: false
+    t.string "spot_id", null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end
 
   create_table "reviews", force: :cascade do |t|
-    t.integer "user_id", null: false
+    t.string "user_id", null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end
@@ -76,9 +76,8 @@ ActiveRecord::Schema.define(version: 2023_02_24_123035) do
     t.text "introduction"
     t.string "quality", null: false
     t.boolean "characteristics", default: true, null: false
-    t.integer "praice"
-    t.integer "category_id", null: false
-    t.boolean "is_active", default: true, null: false
+    t.string "praice"
+    t.string "category_id", null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end
