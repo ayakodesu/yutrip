@@ -16,7 +16,7 @@
         <tbody>
           <% @spots.each do |spot| %>
         <tr>
-          <td><%= image_tag spot.image, size: '150x100'%></td>
+          <td><%#= image_tag spot.image, size: '150x100'%></td>
           <td><%= spot.name %></td>
           <td><%#= spot.category.try(:name) %></td>
           <td><%= spot.quality %></td>

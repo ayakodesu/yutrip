@@ -33,6 +33,6 @@ class Admin::SpotsController < ApplicationController
   private
 
   def spot_params
-    params.require(:spot).permit(:name, :category_id, :quality, :introduction, :image)
+    params.require(:spot).permit(:name, :category_id, :quality, :introduction, :image, :is_active,)
   end
 end
