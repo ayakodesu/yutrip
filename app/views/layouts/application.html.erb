@@ -66,9 +66,19 @@
           Home
           <% end %>
         </li>
+        <li class="nav-item">
+         <%= link_to new_admin_spot_path, class: 'nav-link text-light' do %>
+          新規投稿一覧
+          <% end %>
+    </li>
     <li class="nav-item">
          <%= link_to admin_spots_path, class: 'nav-link text-light' do %>
           投稿一覧
+          <% end %>
+    </li>
+    <li class="nav-item">
+         <%= link_to new_admin_category_path, class: 'nav-link text-light' do %>
+          カテゴリー一覧
           <% end %>
     </li>
 

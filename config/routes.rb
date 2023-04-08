@@ -4,7 +4,7 @@ Rails.application.routes.draw do
     get '/' => 'homes#top'
     get 'homes/about'
     resources :spots, only: [:new, :index, :edit, :destroy, :show, :update, :create] do
-    resource :favorites, only: [:create, :destroy]
+      resource :favorites, only: [:create, :destroy]
   end
     resources :reviews, only: [:new, :index, :edit, :destroy, :show, :update, :create]
     resources :favorites, only: [:index]
