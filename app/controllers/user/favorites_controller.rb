@@ -2,8 +2,8 @@ class User::FavoritesController < ApplicationController
 
 
   def index
-    @favorites = current_user.favorites
-
+    @favorite = current_user.favorites
+    @favorites = current_user.favorites.page(params[:page]).per(5)
   end
 
   def destroy
