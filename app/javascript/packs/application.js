@@ -81,3 +81,5 @@ $(function () {
 });
 
 
+//= require Chart.bundle
+//= require chartkick
