@@ -23,6 +23,8 @@ class User::SpotsController < ApplicationController
   end
 
   def show
+    @spot = Spot.find(params[:id])
+    @review = Review.new
   end
 
   def update
