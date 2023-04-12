@@ -1,8 +1,18 @@
-<h1>User::Spots#show</h1>
-<p>Find me in app/views/user/spots/show.html.erb</p>
-
 
 <%= form_with model: @spot, url: user_spots_path do |f| %>
+<div class="container">
+  <div class="row mt-3 justify-content-center">
+      <div class="col-lg col-md-5 mb-5 text-center">
+        <%= image_tag @spot.image, size: '350x300' %>
+      </div>
+        <div class="col-6">
+          <table class="table table-borderless table-striped">
+            <tr><th>商品名</th>
+          <td><%= @spot.name %></td></tr>
+          <tr><th>商品説明</th>
+          <td><%= @spot.quality %></td>
+          <tr><th>商品説明</th>
+          <td><%= @spot.introduction %></td>
 
 
 
