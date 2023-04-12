@@ -18,7 +18,7 @@ import "bootstrap";
 import "../stylesheets/application"
 import '@fortawesome/fontawesome-free/js/all'
 
-
+$(document).on('turbolinks:load', function() {
 
 //= require jquery
 //= require jquery_ujs
@@ -84,5 +84,5 @@ $(function () {
   });
 });
 
-
+});
 
