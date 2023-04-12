@@ -18,9 +18,13 @@ import "bootstrap";
 import "../stylesheets/application"
 import '@fortawesome/fontawesome-free/js/all'
 
+
+
 //= require jquery
 //= require jquery_ujs
-
+//= require jquery.turbolinks
+//= require Chart.bundle
+//= require chartkick
 
 
 $(function () {
@@ -81,5 +85,4 @@ $(function () {
 });
 
 
-//= require Chart.bundle
-//= require chartkick
+
