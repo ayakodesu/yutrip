@@ -13,8 +13,19 @@
           <td><%= @spot.quality %></td>
           <tr><th>商品説明</th>
           <td><%= @spot.introduction %></td>
-
-
-
+          <div>
+  <p>コメント件数：<%= @spot.reviews.count %></p>
+  <% @spot.reviews.each do |review| %>
+    <p><%= image_tag review.user.get_profile_image(100,100) %></p>
+    <%= review.user.name %>
+    <%= review.created_at.strftime('%Y/%m/%d') %><%= review.comment %>
+  <% end %>
+</div>
+<div>
+  <%= form_with model: [@spot, @review] do |f| %>
+    <%= f.text_area :comment, rows: '5', placeholder: "コメントをここに" %>
+    <%= f.submit "送信する" %>
+  <% end %>
+</div>
 
 <% end %>
