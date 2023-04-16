@@ -31,6 +31,6 @@ class User::SpotsController < ApplicationController
   end
 
   def spot_params
-    params.require(:spot).permit(:name, :category_id, :quality, :introduction, :is_active, :image)
+    params.require(:spot).permit(:name, :category_id, :quality, :introduction, :is_active, :image, :review)
   end
 end
