@@ -7,10 +7,11 @@
         <thead>
           <th></th>
           <th>画像</th>
-          <th>タイトル</th>
+          <th>温泉名</th>
           <th>カテゴリー</th>
-          <th>本</th>
-          <th>本文</th>
+          <th>質</th>
+          <th>説明</th>
+          <th>レビュー</th>
         </thead>
         <tbody>
           <% @spots.each do |spot| %>
@@ -44,6 +45,7 @@
           <td><%#= spot.category.try(:name) %></td>
           <td><%= spot.quality %></td>
           <td><%= spot.introduction %></td>
+          <td></td>
         </tr>
           <% end %>
         </tbody>
