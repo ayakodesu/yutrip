@@ -9,6 +9,8 @@
           <table class="table table-borderless table-striped">
             <tr><th>商品名</th>
           <td><%= @spot.name %></td></tr>
+          <tr><th>カテゴリー</th>
+          <td><%= @spot.category.try(:name) %></td>
           <tr><th>商品説明</th>
           <td><%= @spot.quality %></td>
           <tr><th>商品説明</th>
