@@ -51,7 +51,7 @@
           <td><%= spot.category.try(:name) %></td>
           <td><%= spot.quality %></td>
           <td><%= spot.introduction %></td>
-          <td></td>
+          <td><%= link_to "レビュー", user_review_path(spot.id) %></td>
         </tr>
           <% end %>
         </tbody>
