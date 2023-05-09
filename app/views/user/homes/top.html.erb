@@ -24,7 +24,7 @@
 <div class="row justify-content-center ">
     ランキング集
 </div>
-<%#= pie_chart Vote.group(:category).count%>
+<%= pie_chart Spot.group(:category).count %>
 
 </div>
 <%#= pie_chart Yogurt.group(:category).count %>
