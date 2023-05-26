@@ -2,7 +2,7 @@ class User::HomesController < ApplicationController
   def top
     @category = Spot.pluck(:category)
     @aggregate = aggregateSpot(@category)
-    @sum = sumSpot(@category)
+    #@sum = sumSpot(@category)
   end
 
   def aggregateSpot(array)
