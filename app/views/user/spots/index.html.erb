@@ -7,6 +7,14 @@
   </div>
 </div>
 
+<div class="row mb-3 justify-content-center">
+  <%= form_tag(user_spots_path, method: :get) do %>
+  <%= select_tag :category_id, options_from_collection_for_select( Category.all, :id, :name) %>
+  <%= submit_tag "ジャンル検索", class: "btn-gradient-pink" %>
+<% end %>
+</div>
+
+
 
 
 <div class="container text-center">
