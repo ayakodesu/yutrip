@@ -13,7 +13,14 @@ class User::SpotsController < ApplicationController
   end
 
   def index
-    @spots = Spot.page(params[:page]).per(5)
+    #@spots = Spot.page(params[:page]).per(5)
+    if params[:search].present?
+      @spots = Spot.search(params[:search]).order('id DESC').page(params[:page]).per(10)
+    elsif params[:category_id].present?
+      @spots = Spot.where(category_id: params[:category_id]).page(params[:page]).per(10)
+    else
+      @spots = Spot.all.order('id DESC').page(params[:page]).per(10)
+    end
   end
 
   def edit
