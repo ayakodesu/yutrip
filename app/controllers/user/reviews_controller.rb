@@ -4,20 +4,23 @@ class User::ReviewsController < ApplicationController
   end
 
   def create
-    @review = current_user.reviews.new(review_params)
-    @review.save
-    redirect_to spot_path(@review.spot_id)
-    #@spot = Spot.find(params[:spot_id])
-    #comment = current_user.spots.new(review_params)
-    #comment.spot_id = spot.id
-    #comment.save
-    #redirect_to user_spots_path(spot)
+    #@review = current_user.reviews.new(review_params)
+    #@review.save
+    #redirect_to spot_path(@review.spot_id)
+
+    spot = Spot.find(params[:spot_id])
+    comment = current_user.reviews.new(review_params)
+    comment.spot_id = spot.id
+    comment.save
+    redirect_to spot_path(spot)
   end
 
   def index
   end
 
   def show
+    @spot = Spot.find(params[:id])
+    @review = Review.new
   end
 
   def edit
