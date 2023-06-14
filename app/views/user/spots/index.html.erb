@@ -62,7 +62,8 @@
           <td><%= spot.category.try(:name) %></td>
           <td><%= spot.quality %></td>
           <td><%= spot.introduction %></td>
-          <td><%= link_to "レビュー詳細", user_review_path(spot.id) %></td>
+          <td><%= link_to "レビュー詳細", user_reviews_path %><br>
+          <%= link_to "レビュー投稿", new_user_review_path %></td>
         </tr>
           <% end %>
         </tbody>
